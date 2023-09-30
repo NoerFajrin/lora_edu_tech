@@ -1,0 +1,6 @@
+CREATE TABLE nama_tabel (
+    id INT(11) PRIMARY KEY AUTO_INCREMENT,
+    temperature FLOAT,
+    humidity FLOAT,
+    timestamp TIMESTAMP DEFAULT CURRENT_TIMESTAMP()
+);
