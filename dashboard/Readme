@@ -1,1 +1,23 @@
+Langkah 1
+Install xampp
+
+Langkah 2
+Buat Folder di C:\xampp\htdocs dengan nama LoRaWeb
+
+Langkah 3
+Copy seluruh File .php ke LoRa Web
+
+Langkah 4 
+Buat Database dengan nama monitoring
+
+Langkah 5 
+buat Tabel dengan kolom id|Temperature|Humidity|Timestamp
+copy pada SQL
+CREATE TABLE monitoring (
+    id INT(11) PRIMARY KEY AUTO_INCREMENT,
+    temperature FLOAT,
+    humidity FLOAT,
+    timestamp TIMESTAMP DEFAULT CURRENT_TIMESTAMP()
+);
+
 
