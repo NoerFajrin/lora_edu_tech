@@ -1,4 +1,4 @@
-CREATE TABLE nama_tabel (
+CREATE TABLE monitoring (
     id INT(11) PRIMARY KEY AUTO_INCREMENT,
     temperature FLOAT,
     humidity FLOAT,
