@@ -29,14 +29,14 @@ hasil <br><br>
 # Hasil Akhir Sender & Receiver 
 ![image](https://github.com/NoerFajrin/lora_edu_tech/assets/71316603/0fc5aa75-06d6-47d0-b7a6-121469c1296a) <br>
 
+# Part 2 (Node-Red Zone)
+Pastikan sudah tersedia raspberry pi3/pi4 yang sudah terinstall dengan baik<br>
+Enable : SSH, dan Serial <br>
+![image](https://github.com/NoerFajrin/lora_edu_tech/assets/71316603/5f09579d-299e-4f76-b407-17d22eed7eac)<br>
+# Install Node-red
+ketikan : bash <(curl -sL https://raw.githubusercontent.com/node-red/linux-installers/master/deb/update-nodejs-and-nodered) pada terminal <br>
 
 
-
-
-
-
-# Baca Sensor DHT
-Upload dan Runing program DHT
 
 # Buat Reciever
 # Server Local
