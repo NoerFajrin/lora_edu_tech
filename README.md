@@ -28,18 +28,14 @@ hasil <br><br>
 ![image](https://github.com/NoerFajrin/lora_edu_tech/assets/71316603/5d43568f-6db3-4230-a279-cf69f7efb6be) <br>
 # Hasil Akhir Sender & Receiver 
 ![image](https://github.com/NoerFajrin/lora_edu_tech/assets/71316603/0fc5aa75-06d6-47d0-b7a6-121469c1296a) <br>
-# Part 2 (Node-Red Zone)
-Pastikan sudah tersedia raspberry pi3/pi4 yang sudah terinstall dengan baik<br>
-Enable : SSH, dan Serial <br>
-![image](https://github.com/NoerFajrin/lora_edu_tech/assets/71316603/5f09579d-299e-4f76-b407-17d22eed7eac)<br>
-# Install Node-red
-ketikan : bash <(curl -sL https://raw.githubusercontent.com/node-red/linux-installers/master/deb/update-nodejs-and-nodered) pada terminal <br>
-
-
-
-# Buat Reciever
-# Server Local
-Instal xampp
+# Part 2 (Hosting Zone)
+Pada bagian ini, kita akan membuat database untuk menyimpan hasil monitoring secara local
+# Install XAMPP
+Install XAMPP sesuai dengan OS Laptop anda https://www.apachefriends.org/
+# Running XAMPP
+![image](https://github.com/NoerFajrin/lora_edu_tech/assets/71316603/fd0e33c2-de8f-4bd0-a23f-714cee00551e)
+# Membuat Data Base
+buka halaman : http://localhost/phpmyadmin/index.php <br>
 buat database dengan nama monitoring <br>
 ![image](https://github.com/NoerFajrin/lora_edu_tech/assets/71316603/8610e951-bc7b-432b-852b-843401666953)
 buat tabel dengan nama monitoring <br>
@@ -53,6 +49,24 @@ CREATE TABLE monitoring (
     humidity FLOAT,
     timestamp TIMESTAMP DEFAULT CURRENT_TIMESTAMP()
 );
+
+
+# Part 3 (Node-Red Zone)
+Pastikan sudah tersedia raspberry pi3/pi4 yang sudah terinstall dengan baik<br>
+Enable : SSH, dan Serial <br>
+![image](https://github.com/NoerFajrin/lora_edu_tech/assets/71316603/5f09579d-299e-4f76-b407-17d22eed7eac)<br>
+# Install Node-red
+![image](https://github.com/NoerFajrin/lora_edu_tech/assets/71316603/d50d5361-cba3-4bde-9210-fb4b4f199a1a) <br>
+kunjungi untuk lebih detail : https://nodered.org/docs/getting-started/raspberrypi <br>
+
+
+
+
+
+# Buat Reciever
+# Server Local
+Instal xampp
+
 
 
 ![image](https://github.com/NoerFajrin/lora_edu_tech/assets/71316603/73131815-a926-4d81-a91c-b3250e46c21b)
