@@ -2,10 +2,11 @@
 Install Library DHT11 langsung dari Sidebar Libarary Arduino <br><br>
 ![image](https://github.com/NoerFajrin/lora_edu_tech/assets/71316603/31a511e1-4aea-4e7b-9471-c3869055125b)
 <br><br>
-Install Librady LoRa
+Install Library LoRa
 <br>
 https://github.com/NoerFajrin/lora_edu_tech/blob/main/Arduino/arduino-LoRa-master.zip
 <br><br>
+# Persiapan Membuat Sender
 Rankai DHT dengan ESP32
 <br>
 Connect DHT11 digital input pin to GPIO4 of ESP32. <br>
