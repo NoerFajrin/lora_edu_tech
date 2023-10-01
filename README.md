@@ -28,7 +28,6 @@ hasil <br><br>
 ![image](https://github.com/NoerFajrin/lora_edu_tech/assets/71316603/5d43568f-6db3-4230-a279-cf69f7efb6be) <br>
 # Hasil Akhir Sender & Receiver 
 ![image](https://github.com/NoerFajrin/lora_edu_tech/assets/71316603/0fc5aa75-06d6-47d0-b7a6-121469c1296a) <br>
-
 # Part 2 (Node-Red Zone)
 Pastikan sudah tersedia raspberry pi3/pi4 yang sudah terinstall dengan baik<br>
 Enable : SSH, dan Serial <br>
