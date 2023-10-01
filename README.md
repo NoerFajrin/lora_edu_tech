@@ -20,13 +20,13 @@ Tambahkan Module LoRa <br>
 Edit Code menjadi : https://github.com/NoerFajrin/lora_edu_tech/blob/main/Arduino/Send_ValueDHT_by_LoRa.ino <br>
 hasil <br><br>
 ![image](https://github.com/NoerFajrin/lora_edu_tech/assets/71316603/4e858f70-42b1-4af8-b960-eecd611d7c82) <br>
-# Membuat Reciever
+# Membuat Receiver
 Rangkaian LoRa dengan ESP32 persis sama dengan Sender
 ![image](https://github.com/NoerFajrin/lora_edu_tech/assets/71316603/7811a875-7fab-4f28-86af-e4524af473da) <br>
 code : https://github.com/NoerFajrin/lora_edu_tech/blob/main/Arduino/Receiver_Only.ino <br>
 hasil <br><br>
 ![image](https://github.com/NoerFajrin/lora_edu_tech/assets/71316603/5d43568f-6db3-4230-a279-cf69f7efb6be) <br>
-# Hasil Akhir Sender & Reciver 
+# Hasil Akhir Sender & Receiver 
 ![image](https://github.com/NoerFajrin/lora_edu_tech/assets/71316603/0fc5aa75-06d6-47d0-b7a6-121469c1296a) <br>
 
 
