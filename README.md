@@ -38,6 +38,40 @@ CREATE TABLE monitoring (
 <br>
 ![image](https://github.com/NoerFajrin/lora_edu_tech/assets/71316603/27be7691-454f-4581-9603-db3cb838a175)
 <br>
+![image](https://github.com/NoerFajrin/lora_edu_tech/assets/71316603/c25dc9bb-ae3b-4622-b2a6-91098e9fcea7)
+<br>
+<br>
+![image](https://github.com/NoerFajrin/lora_edu_tech/assets/71316603/99cc9c8b-2b82-419e-b949-3d8a8be2aa7d)
+<br>
+the code :
+<br>
+------------------------------------------------------------
+<br>
+// Parse the JSON-like string into a JavaScript object
+var kirim = msg.payload;
+var jsonData;
+try {
+    jsonData = JSON.parse(kirim);
+} catch (error) {
+    node.error("Error parsing JSON: " + error.message);
+    return null; // Return null to stop processing this message
+}
+
+// Extract temperature and humidity from the object
+var temperature = jsonData.Temperature;
+var humidity = jsonData.Humidity;
+
+// Construct the SQL query
+msg.topic = "INSERT INTO monitoring.monitoring (temperature, humidity, timestamp) VALUES (" + temperature + ", " + humidity + ", NOW())";
+
+// Construct the SQL query
+// msg.topic = "INSERT INTO dawnproj_undangan.monitoring (temperature, humidity, timestamp) VALUES (" + temperature + ", " + humidity + ", NOW())";
+
+return msg;
+<br>
+-----------------------------------------------------------------------------
+
+
 
 
 
