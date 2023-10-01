@@ -6,13 +6,34 @@ Install Library LoRa
 <br>
 https://github.com/NoerFajrin/lora_edu_tech/blob/main/Arduino/arduino-LoRa-master.zip
 <br><br>
-# Persiapan Membuat Sender
+# Membuat Sender
 Rankai DHT dengan ESP32
 <br>
 Connect DHT11 digital input pin to GPIO4 of ESP32. <br>
 Connect  VCC to 3.3V <br>
 connect  GND to GND of ESP32.<br>
-<br><br>
+code : https://github.com/NoerFajrin/lora_edu_tech/blob/main/Arduino/DHT_ESP32.ino <br>
+hasil <br><br>
+![image](https://github.com/NoerFajrin/lora_edu_tech/assets/71316603/25895847-bcb8-425b-9350-2cce395ac2d4) <br><br>
+Tambahkan Module LoRa <br>
+![image](https://github.com/NoerFajrin/lora_edu_tech/assets/71316603/7811a875-7fab-4f28-86af-e4524af473da) <br>
+Edit Code menjadi : https://github.com/NoerFajrin/lora_edu_tech/blob/main/Arduino/Send_ValueDHT_by_LoRa.ino <br>
+hasil <br><br>
+![image](https://github.com/NoerFajrin/lora_edu_tech/assets/71316603/4e858f70-42b1-4af8-b960-eecd611d7c82) <br>
+# Membuat Reciever
+Rangkaian LoRa dengan ESP32 persis sama dengan Sender
+![image](https://github.com/NoerFajrin/lora_edu_tech/assets/71316603/7811a875-7fab-4f28-86af-e4524af473da) <br>
+code : https://github.com/NoerFajrin/lora_edu_tech/blob/main/Arduino/Receiver_Only.ino <br>
+hasil <br><br>
+![image](https://github.com/NoerFajrin/lora_edu_tech/assets/71316603/5d43568f-6db3-4230-a279-cf69f7efb6be) <br>
+# Hasil Akhir Sender & Reciver 
+![image](https://github.com/NoerFajrin/lora_edu_tech/assets/71316603/0fc5aa75-06d6-47d0-b7a6-121469c1296a) <br>
+
+
+
+
+
+
 
 # Baca Sensor DHT
 Upload dan Runing program DHT
