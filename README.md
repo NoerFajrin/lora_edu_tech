@@ -65,7 +65,11 @@ cari node-red-node-serialport pada manage palette <br>
 Hubungkan ESP32 dengan Raspy melalui USB <br>
 ![WhatsApp Image 2023-10-01 at 10 49 42](https://github.com/NoerFajrin/lora_edu_tech/assets/71316603/d1db6d0c-23c5-4aa6-9881-acf712c555a5) <br>
 Setting Palette serial in sesuai dengan baudrate esp32 <br>
-![image](https://github.com/NoerFajrin/lora_edu_tech/assets/71316603/d6742f62-f45c-4570-844a-ac1dc2581642)
+![image](https://github.com/NoerFajrin/lora_edu_tech/assets/71316603/d6742f62-f45c-4570-844a-ac1dc2581642) <br>
+Tambahkan Palette Debug <br>
+![image](https://github.com/NoerFajrin/lora_edu_tech/assets/71316603/e541747f-5358-46ab-98bb-69a477562ead)
+
+
 
 
 
