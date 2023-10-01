@@ -61,7 +61,9 @@ Pada Flow kali ini, kita membutuhkan 4 Palette yang berbeda<br>
 <br>
 Install Palette Serial in <br>
 cari node-red-node-serialport pada manage palette <br>
-![image](https://github.com/NoerFajrin/lora_edu_tech/assets/71316603/67c1d837-4bdc-4bba-8464-613dfd8e676c) <br>
+
+![image](https://github.com/NoerFajrin/lora_edu_tech/assets/71316603/41f517b6-c667-472b-9b66-3c2173b17476) <br>
+
 Hubungkan ESP32 dengan Raspy melalui USB <br>
 ![WhatsApp Image 2023-10-01 at 10 49 42](https://github.com/NoerFajrin/lora_edu_tech/assets/71316603/d1db6d0c-23c5-4aa6-9881-acf712c555a5) <br>
 Setting Palette serial in sesuai dengan baudrate esp32 <br>
