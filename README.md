@@ -51,12 +51,13 @@ Enable : SSH, dan Serial <br>
 # Install Node-red
 ![image](https://github.com/NoerFajrin/lora_edu_tech/assets/71316603/d50d5361-cba3-4bde-9210-fb4b4f199a1a) <br>
 kunjungi untuk lebih detail : https://nodered.org/docs/getting-started/raspberrypi <br>
+# Buat Flow Node-Red 
+Pada Flow kali ini, kita membutuhkan 4 Palette yang berbeda<br>
+1. Palette Serial In
+2. Palette Debug
+3. Palette Function
+4. Palatte Http Request
 
-
-
-
-
-# Buat Reciever
 # Server Local
 Instal xampp
 
