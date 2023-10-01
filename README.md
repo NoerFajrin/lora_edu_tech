@@ -78,37 +78,22 @@ code : https://github.com/NoerFajrin/lora_edu_tech/blob/main/node-red/function%2
 Klik Palette Http Request, lakukan pengaturan sesuai method dan url endpoint<br>
 ![image](https://github.com/NoerFajrin/lora_edu_tech/assets/71316603/5c56f433-2479-477e-8ee7-605e2f34ca71)<br><b>
 
+# Part 4 (Baackend & Frontend Zone)
+Buat Folder LoRaWeb di dalam C:\xampp\htdocs\ <br>
+![image](https://github.com/NoerFajrin/lora_edu_tech/assets/71316603/c2002836-87f7-43b7-8f3a-5ca8f92d3c18) <br>
+buat 3 file .php
+1. index.php
+2. kirim.php
+3. get_data.php
 
+semua file .php dapat di unduh di : https://github.com/NoerFajrin/lora_edu_tech/tree/main/dashboard/php_file <br>
 
-
-
-
-
-
-
-
-
-# Server Local
-Instal xampp
-
-
-
-
-#Node Red
-![image](https://github.com/NoerFajrin/lora_edu_tech/assets/71316603/980c6a88-9a42-4394-92b9-084468980b28)
-<br>
-![image](https://github.com/NoerFajrin/lora_edu_tech/assets/71316603/a0323cd9-5c2c-4814-8764-b53b9dfb66ee)
-<br>
-<br>
-![image](https://github.com/NoerFajrin/lora_edu_tech/assets/71316603/27be7691-454f-4581-9603-db3cb838a175)
-<br>
-![image](https://github.com/NoerFajrin/lora_edu_tech/assets/71316603/c25dc9bb-ae3b-4622-b2a6-91098e9fcea7)
-<br>
-<br>
-![image](https://github.com/NoerFajrin/lora_edu_tech/assets/71316603/99cc9c8b-2b82-419e-b949-3d8a8be2aa7d)
-
-
-
-
-
-
+# Part 5 (Integrasi Gateway, dengan Website)
+Hubungkan seluruh Pallete seperti berikut <br>
+![image](https://github.com/NoerFajrin/lora_edu_tech/assets/71316603/c80d68ea-87da-4e2f-858f-8d15b6079e27)<br><br>
+Perhatikan Debug yang baru : <br>
+![image](https://github.com/NoerFajrin/lora_edu_tech/assets/71316603/b1477a27-cec2-43b6-9acc-64f1dd8fd2cf) <br><br>
+chek database di phpmayadmin : <br>
+![image](https://github.com/NoerFajrin/lora_edu_tech/assets/71316603/820b996f-bc6f-404c-9346-ed4605f0d388) <br><br>
+chek halaman monitoring di http://localhost/LoRaWeb/index.php <br>
+![image](https://github.com/NoerFajrin/lora_edu_tech/assets/71316603/f6e11965-51d5-4859-a299-f6ec049805a9) <br><br>
