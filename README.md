@@ -41,9 +41,6 @@ buat database dengan nama monitoring <br><br>
 buat tabel dengan nama monitoring, Tabel dengan kolom id|Temperature|Humidity|Timestamp <br> 
 sqlcode = https://github.com/NoerFajrin/lora_edu_tech/blob/main/dashboard/sql_create_tabel<br><br>
 ![image](https://github.com/NoerFajrin/lora_edu_tech/assets/71316603/e892c3e6-a5e0-4ddb-8787-8c8f7f1af9f3) <br>
-
-
-
 # Part 3 (Node-Red Zone)
 Pastikan sudah tersedia raspberry pi3/pi4 yang sudah terinstall dengan baik<br>
 Enable : SSH, dan Serial <br>
@@ -62,14 +59,28 @@ Pada Flow kali ini, kita membutuhkan 4 Palette yang berbeda<br>
 Install Palette Serial in <br>
 cari node-red-node-serialport pada manage palette <br>
 
-![image](https://github.com/NoerFajrin/lora_edu_tech/assets/71316603/41f517b6-c667-472b-9b66-3c2173b17476) <br>
+![image](https://github.com/NoerFajrin/lora_edu_tech/assets/71316603/41f517b6-c667-472b-9b66-3c2173b17476) <br><br>
 
 Hubungkan ESP32 dengan Raspy melalui USB <br>
-![WhatsApp Image 2023-10-01 at 10 49 42](https://github.com/NoerFajrin/lora_edu_tech/assets/71316603/d1db6d0c-23c5-4aa6-9881-acf712c555a5) <br>
+![image](https://github.com/NoerFajrin/lora_edu_tech/assets/71316603/0c036d4d-8471-401e-a294-f819606c7632) <br><br>
+
 Setting Palette serial in sesuai dengan baudrate esp32 <br>
-![image](https://github.com/NoerFajrin/lora_edu_tech/assets/71316603/d6742f62-f45c-4570-844a-ac1dc2581642) <br>
+![image](https://github.com/NoerFajrin/lora_edu_tech/assets/71316603/d6742f62-f45c-4570-844a-ac1dc2581642) <br><br>
 Tambahkan Palette Debug <br>
-![image](https://github.com/NoerFajrin/lora_edu_tech/assets/71316603/e541747f-5358-46ab-98bb-69a477562ead)
+![image](https://github.com/NoerFajrin/lora_edu_tech/assets/71316603/e541747f-5358-46ab-98bb-69a477562ead)<br><br>
+Hasil Debug <br>
+![image](https://github.com/NoerFajrin/lora_edu_tech/assets/71316603/ec5167e6-0bc3-48e6-8fe7-6b9969ad1316) <br><br>
+Tambahkan Palette Function dan Http Request <br>
+![image](https://github.com/NoerFajrin/lora_edu_tech/assets/71316603/313912f7-cb92-41af-b193-54208d0b1c1f) <br><br>
+klik Palette Function <br>
+![image](https://github.com/NoerFajrin/lora_edu_tech/assets/71316603/a4cbde27-15a2-4c89-ba08-a505712623e5) <br><br>
+code : https://github.com/NoerFajrin/lora_edu_tech/blob/main/node-red/function%20code <br><br>
+Klik Palette Http Request, lakukan pengaturan sesuai method dan url endpoint<br>
+![image](https://github.com/NoerFajrin/lora_edu_tech/assets/71316603/5c56f433-2479-477e-8ee7-605e2f34ca71)<br><b>
+
+
+
+
 
 
 
