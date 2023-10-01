@@ -36,19 +36,12 @@ Install XAMPP sesuai dengan OS Laptop anda https://www.apachefriends.org/
 ![image](https://github.com/NoerFajrin/lora_edu_tech/assets/71316603/fd0e33c2-de8f-4bd0-a23f-714cee00551e)
 # Membuat Data Base
 buka halaman : http://localhost/phpmyadmin/index.php <br>
-buat database dengan nama monitoring <br>
-![image](https://github.com/NoerFajrin/lora_edu_tech/assets/71316603/8610e951-bc7b-432b-852b-843401666953)
-buat tabel dengan nama monitoring <br>
-![image](https://github.com/NoerFajrin/lora_edu_tech/assets/71316603/e892c3e6-a5e0-4ddb-8787-8c8f7f1af9f3)
-untuk membuat tabel bisa dengan menggunakan SQL 
-Tabel dengan kolom id|Temperature|Humidity|Timestamp
-copy pada SQL
-CREATE TABLE monitoring (
-    id INT(11) PRIMARY KEY AUTO_INCREMENT,
-    temperature FLOAT,
-    humidity FLOAT,
-    timestamp TIMESTAMP DEFAULT CURRENT_TIMESTAMP()
-);
+buat database dengan nama monitoring <br><br>
+![image](https://github.com/NoerFajrin/lora_edu_tech/assets/71316603/8610e951-bc7b-432b-852b-843401666953) <br> <br>
+buat tabel dengan nama monitoring, Tabel dengan kolom id|Temperature|Humidity|Timestamp <br> 
+sqlcode = https://github.com/NoerFajrin/lora_edu_tech/blob/main/dashboard/sql_create_tabel<br><br>
+![image](https://github.com/NoerFajrin/lora_edu_tech/assets/71316603/e892c3e6-a5e0-4ddb-8787-8c8f7f1af9f3) <br>
+
 
 
 # Part 3 (Node-Red Zone)
@@ -69,7 +62,6 @@ Instal xampp
 
 
 
-![image](https://github.com/NoerFajrin/lora_edu_tech/assets/71316603/73131815-a926-4d81-a91c-b3250e46c21b)
 
 #Node Red
 ![image](https://github.com/NoerFajrin/lora_edu_tech/assets/71316603/980c6a88-9a42-4394-92b9-084468980b28)
