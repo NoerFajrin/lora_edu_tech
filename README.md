@@ -5,7 +5,13 @@ Install Library DHT11 langsung dari Sidebar Libarary Arduino <br><br>
 Install Librady LoRa
 <br>
 https://github.com/NoerFajrin/lora_edu_tech/blob/main/Arduino/arduino-LoRa-master.zip
-<br><br>Rankai DHT dengan ESP32
+<br><br>
+Rankai DHT dengan ESP32
+<br>
+Connect DHT11 digital input pin to GPIO4 of ESP32. <br>
+Connect  VCC to 3.3V <br>
+connect  GND to GND of ESP32.<br>
+<br><br>
 
 # Baca Sensor DHT
 Upload dan Runing program DHT
