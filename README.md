@@ -17,6 +17,15 @@ buat database dengan nama monitoring <br>
 ![image](https://github.com/NoerFajrin/lora_edu_tech/assets/71316603/8610e951-bc7b-432b-852b-843401666953)
 buat tabel dengan nama monitoring <br>
 ![image](https://github.com/NoerFajrin/lora_edu_tech/assets/71316603/e892c3e6-a5e0-4ddb-8787-8c8f7f1af9f3)
+untuk membuat tabel bisa dengan menggunakan SQL 
+Tabel dengan kolom id|Temperature|Humidity|Timestamp
+copy pada SQL
+CREATE TABLE monitoring (
+    id INT(11) PRIMARY KEY AUTO_INCREMENT,
+    temperature FLOAT,
+    humidity FLOAT,
+    timestamp TIMESTAMP DEFAULT CURRENT_TIMESTAMP()
+);
 
 
 ![image](https://github.com/NoerFajrin/lora_edu_tech/assets/71316603/73131815-a926-4d81-a91c-b3250e46c21b)
