@@ -1,5 +1,6 @@
 # LoRa, Esp32, Nodered, Rasp 3, Xampp, PHP
-![image](https://github.com/NoerFajrin/lora_edu_tech/assets/71316603/6d75540a-0a2b-49ce-9fd0-6282937045d7)
+![image](https://github.com/NoerFajrin/lora_edu_tech/assets/71316603/3a8c4f53-839c-46ff-8cd4-541d81adae13)
+
 
 # Part 1 (Arduino Zone)
 Install Library DHT11 langsung dari Sidebar Libarary Arduino <br><br>
