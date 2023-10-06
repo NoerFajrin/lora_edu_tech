@@ -1,0 +1,11 @@
+SQL membuat tabel
+CREATE TABLE mylog(
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nama_user VARCHAR(255),
+    temperature FLOAT,
+    humidity FLOAT,
+    heart_rate INT,
+    lat DECIMAL(10, 6),
+    lon DECIMAL(10, 6),
+    timestamp TIMESTAMP
+);
