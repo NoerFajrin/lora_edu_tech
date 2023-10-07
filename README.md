@@ -48,6 +48,12 @@ sqlcode = https://github.com/NoerFajrin/lora_edu_tech/blob/main/dashboard/sql_cr
 # Part 3 (Node-Red Zone)
 Pastikan sudah tersedia raspberry pi3/pi4 yang sudah terinstall dengan baik<br>
 Enable : SSH, dan Serial <br>
+sudo raspi-config <br>
+Interfacing Options, navigate to and select SSH, choose Yes, and select Ok <br>
+Choose P6 Serial ==> Select <br>
+Answer NO to: Would you like a login shell to be accessible over the serial? <br>
+Answer YES to: Would you like the serial port hardware to be enabled? <br>
+
 ![image](https://github.com/NoerFajrin/lora_edu_tech/assets/71316603/5f09579d-299e-4f76-b407-17d22eed7eac)<br>
 # Install Node-red
 ![image](https://github.com/NoerFajrin/lora_edu_tech/assets/71316603/d50d5361-cba3-4bde-9210-fb4b4f199a1a) <br>
