@@ -1,0 +1,321 @@
+[
+    {
+        "id": "f141b8e1b1b5e2f3",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "cec574ce47a762ce",
+        "type": "serial-port",
+        "serialport": "/dev/ttyUSB0",
+        "serialbaud": "115200",
+        "databits": "8",
+        "parity": "none",
+        "stopbits": "1",
+        "waitfor": "",
+        "dtr": "none",
+        "rts": "none",
+        "cts": "none",
+        "dsr": "none",
+        "newline": "\\n",
+        "bin": "false",
+        "out": "char",
+        "addchar": "",
+        "responsetimeout": "10000"
+    },
+    {
+        "id": "87e0ad8bc66fd3d2",
+        "type": "debug",
+        "z": "f141b8e1b1b5e2f3",
+        "name": "debug 1",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 540,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "b17bee53b70fdbb4",
+        "type": "http request",
+        "z": "f141b8e1b1b5e2f3",
+        "name": "",
+        "method": "POST",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "192.168.0.103/LoRaWeb/kirim.php",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 490,
+        "y": 60,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "235f7a06cbbbe71a",
+        "type": "serial in",
+        "z": "f141b8e1b1b5e2f3",
+        "name": "",
+        "serial": "cec574ce47a762ce",
+        "x": 90,
+        "y": 380,
+        "wires": [
+            [
+                "87e0ad8bc66fd3d2"
+            ]
+        ]
+    },
+    {
+        "id": "29648690a0b6f058",
+        "type": "function",
+        "z": "f141b8e1b1b5e2f3",
+        "name": "function 1",
+        "func": "/// Parse the JSON-like string into a JavaScript object\nvar kirim = msg.payload;\nvar jsonData;\ntry {\n    jsonData = JSON.parse(kirim);\n} catch (error) {\n    node.error(\"Error parsing JSON: \" + error.message);\n    return null; // Return null to stop processing this message\n}\n\n// Extract temperature and humidity from the object\nvar temperature = jsonData.Temperature;\nvar humidity = jsonData.Humidity;\n\n// Calculate the current timestamp in JavaScript\nvar now = new Date();\nvar timestamp = now.toISOString().slice(0, 19).replace('T', ' ');\n\n// Use the calculated timestamp in the SQL query\nmsg.topic = \"INSERT INTO monitoring.monitoring (temperature, humidity, timestamp) VALUES (\" + temperature + \", \" + humidity + \", '\" + timestamp + \"')\";\n// Construct the SQL query\n// msg.topic = \"INSERT INTO dawnproj_undangan.monitoring (temperature, humidity, timestamp) VALUES (\" + temperature + \", \" + humidity + \", NOW())\";\n\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 300,
+        "y": 60,
+        "wires": [
+            [
+                "b17bee53b70fdbb4"
+            ]
+        ]
+    },
+    {
+        "id": "770c4c9ceaefa090",
+        "type": "function",
+        "z": "f141b8e1b1b5e2f3",
+        "name": "mylog",
+        "func": "\n// Parse the JSON-like string into a JavaScript object\nvar kirim = msg.payload;\nvar jsonData;\ntry {\n    jsonData = JSON.parse(kirim);\n} catch (error) {\n    node.error(\"Error parsing JSON: \" + error.message);\n    return null; // Return null to stop processing this message\n}\n\n// Extract data from the object\nvar nama_user = jsonData.nama_user;\nvar temperature = jsonData.temperature;\nvar humidity = jsonData.humidity;\nvar heart_rate = jsonData.heart_rate;\nvar lat = jsonData.lat;\nvar lon = jsonData.lon;\n\n// Construct the SQL query\nmsg.topic = \"INSERT INTO mylog (nama_user, temperature, humidity, heart_rate, lat, lon, timestamp) VALUES ('\" + nama_user + \"', \" + temperature + \", \" + humidity + \", \" + heart_rate + \", \" + lat + \", \" + lon + \", NOW())\";\n\nreturn msg;\n\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 270,
+        "y": 300,
+        "wires": [
+            [
+                "fd1e6fb79ec557ba"
+            ]
+        ]
+    },
+    {
+        "id": "fd1e6fb79ec557ba",
+        "type": "http request",
+        "z": "f141b8e1b1b5e2f3",
+        "name": "",
+        "method": "POST",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "192.168.0.103/LoRaWeb/kirimlog.php",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 430,
+        "y": 300,
+        "wires": [
+            [
+                "87e0ad8bc66fd3d2"
+            ]
+        ]
+    },
+    {
+        "id": "58bb571b4f4bfc03",
+        "type": "inject",
+        "z": "f141b8e1b1b5e2f3",
+        "name": "Dharma",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "{ \"nama_user\": \"Dharma\",\"temperature\": 25.5,\"humidity\": 60.2,\"heart_rate\": 75,\"lat\": -6.8992,\"lon\": 107.6186}",
+        "payloadType": "str",
+        "x": 90,
+        "y": 240,
+        "wires": [
+            [
+                "770c4c9ceaefa090"
+            ]
+        ]
+    },
+    {
+        "id": "e8f9e9c1a25692e3",
+        "type": "inject",
+        "z": "f141b8e1b1b5e2f3",
+        "name": "Mila",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "{ \"nama_user\": \"Mila\",\"temperature\": 25.5,\"humidity\": 60.2,\"heart_rate\": 75,\"lat\": -8.4095,\"lon\": 115.1889}",
+        "payloadType": "str",
+        "x": 90,
+        "y": 300,
+        "wires": [
+            [
+                "770c4c9ceaefa090"
+            ]
+        ]
+    },
+    {
+        "id": "b14a374d532ee7bb",
+        "type": "inject",
+        "z": "f141b8e1b1b5e2f3",
+        "name": "Shinta",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "{ \"nama_user\": \"Shinta\",\"temperature\": 25.5,\"humidity\": 60.2,\"heart_rate\": 75,\"lat\": -6.9992,\"lon\": 106.6186}",
+        "payloadType": "str",
+        "x": 90,
+        "y": 180,
+        "wires": [
+            [
+                "770c4c9ceaefa090"
+            ]
+        ]
+    },
+    {
+        "id": "6fe08db1e9668999",
+        "type": "inject",
+        "z": "f141b8e1b1b5e2f3",
+        "name": "Yudha",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "{ \"nama_user\": \"Yudha\",\"temperature\": 25.5,\"humidity\": 60.2,\"heart_rate\": 95,\"lat\": -7.8992,\"lon\": 108.6186}",
+        "payloadType": "str",
+        "x": 90,
+        "y": 120,
+        "wires": [
+            [
+                "88aa0dba16f6e806"
+            ]
+        ]
+    },
+    {
+        "id": "88aa0dba16f6e806",
+        "type": "function",
+        "z": "f141b8e1b1b5e2f3",
+        "name": "kiriminternet",
+        "func": "/// Parse the JSON-like string into a JavaScript object\nvar kirim = msg.payload;\nvar jsonData;\ntry {\n    jsonData = JSON.parse(kirim);\n} catch (error) {\n    node.error(\"Error parsing JSON: \" + error.message);\n    return null; // Return null to stop processing this message\n}\n\n// Extract temperature and humidity from the object\nvar temperature = jsonData.Temperature;\nvar humidity = jsonData.Humidity;\n\n// Calculate the current timestamp in JavaScript\nvar now = new Date();\nvar timestamp = now.toISOString().slice(0, 19).replace('T', ' ');\n\n// Use the calculated timestamp in the SQL query\nmsg.topic = \"INSERT INTO monitoring.monitoring (temperature, humidity, timestamp) VALUES (\" + temperature + \", \" + humidity + \", '\" + timestamp + \"')\";\n// Construct the SQL query\n// msg.topic = \"INSERT INTO dawnproj_undangan.monitoring (temperature, humidity, timestamp) VALUES (\" + temperature + \", \" + humidity + \", NOW())\";\n\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 290,
+        "y": 120,
+        "wires": [
+            [
+                "b58838b5d64063bb"
+            ]
+        ]
+    },
+    {
+        "id": "b58838b5d64063bb",
+        "type": "http request",
+        "z": "f141b8e1b1b5e2f3",
+        "name": "",
+        "method": "POST",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "https://dawnproject.my.id/monitoring/kirimlog.php",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 470,
+        "y": 120,
+        "wires": [
+            [
+                "0deae2cb4c64d938"
+            ]
+        ]
+    },
+    {
+        "id": "0deae2cb4c64d938",
+        "type": "debug",
+        "z": "f141b8e1b1b5e2f3",
+        "name": "debug 2",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 660,
+        "y": 120,
+        "wires": []
+    }
+]
